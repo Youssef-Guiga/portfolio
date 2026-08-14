@@ -4,8 +4,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>CineVault</title>
-    <meta content="Prometheus and Grafana monitoring and observability project" name="description">
-    <meta content="prometheus, grafana, monitoring, docker, kubernetes, observability" name="keywords">
+    <meta content="Full-stack movie theater management platform built with NestJS and Angular" name="description">
+    <meta content="nestjs, angular, typeorm, mysql, docker, kubernetes, ci/cd" name="keywords">
 
     <!-- Favicons -->
     <link href="../assets/img/favicon.png" rel="icon">
@@ -36,12 +36,20 @@
           <br>
           <h2 style="color:#12d640">CineVault</h2>
           <ul>
-            <li><strong>Tech Stack</strong>: Prometheus, Grafana, Docker, Kubernetes</li>
+            <li><strong>Tech Stack</strong>: NestJS, TypeORM, MySQL, Angular 19, Docker, Kubernetes, Nginx</li>
+            <li><strong>Github URL</strong>: <a href="https://github.com/Youssef-Guiga/Cine-vault" target="_blank">Project Link</a></li>
           </ul>
           <p>
-            Prometheus and Grafana for monitoring and observability. Configured containerization,
-            service exposure, and real-time metrics visualization.
+            A full-stack movie theater management platform, with a NestJS/TypeORM API backed by MySQL and
+            an Angular 19 standalone frontend.
           </p>
+          <p><strong>Key Features:</strong></p>
+          <ul>
+            <li>JWT authentication with role-based access (admin/manager)</li>
+            <li>Movie and genre catalog management, plus screening, booking, review, and reporting modules</li>
+            <li>Kubernetes manifests with an HPA for backend autoscaling, and Docker Compose for local development</li>
+            <li>CI pipeline (GitHub Actions) running lint, unit tests, and build on both backend and frontend, with k6 smoke tests</li>
+          </ul>
         </div>
       </div>
     </div>

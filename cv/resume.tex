@@ -1,0 +1,159 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{empty}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Youssef Guiga} \\ \vspace{1pt}
+    \small Hergla, Tunisia $|$ youssefguiga@gmail.com $|$ (+216) 25 21 52 52 $|$
+    \href{https://youssef-guiga.github.io/portfolio}{youssef-guiga.github.io/portfolio} $|$
+    \href{https://linkedin.com/in/youssef-g-063828216}{linkedin.com/in/youssef-g-063828216}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {INSAT (Institut National des Sciences Appliqu\'ees et de Technologie)}{Tunis, Tunisia}
+      {Engineering Diploma --- Computer Science \& Networking}{Sept 2021 -- Present}
+      \resumeItemListStart
+        \resumeItem{Focused on networking, telecommunications, and communication systems within a rigorous engineering curriculum in computer science.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL EXPERIENCE-----------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineering Intern}{July 2026 -- Aug 2026}
+      {PwC France}{}
+      \resumeItemListStart
+        \resumeItem{Built a gateway that optimizes routing of prompts across a set of models based on price and benchmark performance.}
+        \resumeItem{Focused on scalability and statelessness in the system's design.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Cloud Engineer - Part Time}{July 2025 -- July 2026}
+      {Bemysense, Doha, Qatar}{}
+      \resumeItemListStart
+        \resumeItem{Managed AWS infrastructure, optimizing performance, security, and scalability.}
+        \resumeItem{Contributed to backend development alongside cloud operations.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Cloud Intern}{July 2025 -- Aug 2025}
+      {CarbonJar}{}
+      \resumeItemListStart
+        \resumeItem{Built AWS infrastructure using Terraform for a SaaS platform focusing on scalability, reliability, and automation.}
+        \resumeItem{Strengthened hands-on cloud and DevOps skills in a production environment.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {DevOps Intern}{June 2024}
+      {JoodLab}{}
+      \resumeItemListStart
+        \resumeItem{Implemented CI/CD pipelines using GitHub Actions.}
+        \resumeItem{Automated deployments using Docker, improving process efficiency.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Orbit --- Kubernetes CTF Platform}{Jan 2025 -- Apr 2025}
+      {IEEE CS INSAT \& CCK}{}
+      \resumeItemListStart
+        \resumeItem{Built a Kubernetes-based Capture The Flag platform for DevOps challenges.}
+        \resumeItem{Deployed and operated the platform for IEEE CS INSAT chapter events.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {CineVault --- Movie Theater Management Platform}{Nov 2025 -- Jan 2026}
+      {Personal Project}{}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack movie theater management platform: a NestJS/TypeORM API backed by MySQL, with an Angular 19 standalone frontend.}
+        \resumeItem{Implemented JWT authentication with role-based access, plus catalog, screening, booking, review, and reporting modules.}
+        \resumeItem{Wrote Kubernetes manifests with an HPA for backend autoscaling and a GitHub Actions CI pipeline (lint, unit tests, build, k6 smoke tests).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {UniFunl --- Azure to AKS Migration}{Mar 2026 -- Present}
+      {Personal Project}{}
+      \resumeItemListStart
+        \resumeItem{Wrote Terraform modules to provision the AKS cluster, database, and Redis cache as reproducible infrastructure-as-code, with remote state locking in Azure Blob Storage.}
+        \resumeItem{Migrated the platform's core services to AKS, containerized behind Kubernetes with Workload Identity for secretless Azure authentication.}
+        \resumeItem{Benchmarked performance before/after the migration with k6, comparing Azure App Services and AKS under load.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS AND SKILLS-----------
+\section{Certifications and Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Certifications}{: Certified Kubernetes Administrator (CKA)} \\
+     \textbf{Cloud \& DevOps}{: AWS, Azure, Kubernetes (AKS/Minikube), Docker, Terraform, CI/CD, GitHub Actions} \\
+     \textbf{Monitoring}{: Prometheus, Grafana, k6} \\
+     \textbf{Programming}{: Flask, NestJS, ExpressJS, Angular} \\
+     \textbf{Tools}{: Git, Linux} \\
+     \textbf{Languages}{: Arabic (native), English (C1), French (B2), Spanish (A2)}
+    }}
+ \end{itemize}
+
+\end{document}

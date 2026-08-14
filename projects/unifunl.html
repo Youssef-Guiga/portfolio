@@ -37,11 +37,18 @@
           <h2 style="color:#12d640">Unifunl</h2>
           <ul>
             <li><strong>Tech Stack</strong>: Terraform, Azure App Services, AKS, Kubernetes, k6</li>
+            <li><strong>Github URL</strong>: <a href="https://github.com/Youssef-Guiga/unifunl-pfa" target="_blank">Project Link</a></li>
           </ul>
           <p>
             Migrated app from Azure App Services to AKS using Terraform, improving scalability and
             reliability; validated performance with k6.
           </p>
+          <p><strong>Key Contributions:</strong></p>
+          <ul>
+            <li>Wrote Terraform modules to provision the AKS cluster, database, and Redis cache as reproducible infrastructure-as-code, with remote state locking in Azure Blob Storage</li>
+            <li>Migrated the platform's core services (front, account, transactor, collaborator) to AKS, containerizing and deploying them behind Kubernetes with Workload Identity for secretless Azure authentication</li>
+            <li>Benchmarked performance before/after the migration with k6, comparing Azure App Services and AKS under load</li>
+          </ul>
         </div>
       </div>
     </div>

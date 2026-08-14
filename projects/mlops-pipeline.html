@@ -3,9 +3,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
   
-    <title>TaskMaster - ToDo App</title>
-    <meta content="Full-featured ToDo application with JWT authentication" name="description">
-    <meta content="nextjs, strapi, todo app, jwt authentication" name="keywords">
+    <title>MLOps Spam Detection Pipeline</title>
+    <meta content="MLOps pipeline for email spam classification with a FastAPI backend and React frontend" name="description">
+    <meta content="mlops, fastapi, react, docker, machine learning, spam detection" name="keywords">
   
     <!-- Favicons -->
     <link href="../assets/img/favicon.png" rel="icon">
@@ -34,28 +34,26 @@
       <div class="row">
         <div class="col-lg-12 portfolio-info">
           <br>
-          <h2 style="color:#12d640">MLOPS pipeline</h2>
-          <ul><li>in progress</li>
-        <li><strong>project description</strong>: <a href="https://drive.google.com/file/d/1RjZwPcrWYnxg-Posi4r5AeGNrNO6SJDq/view?usp=sharing" target="_blank">pdf</a></li>
-    </ul>
-
-          <!-- <ul>
-            <li><strong>Tech Stack</strong>: Next.js, Strapi (Headless CMS)</li>
-            <li><strong>Github Repo</strong>: <a href="https://github.com/yourusername/taskmaster-nextjs" target="_blank">Next.js Repo</a></li>
+          <h2 style="color:#12d640">MLOps Spam Detection Pipeline</h2>
+          <ul>
+            <li><strong>Tech Stack</strong>: FastAPI, React, Docker, SQLite</li>
+            <li><strong>API Repo</strong>: <a href="https://github.com/Youssef-Guiga/spam-detection-api" target="_blank">spam-detection-api</a></li>
+            <li><strong>UI Repo</strong>: <a href="https://github.com/Youssef-Guiga/spam-detection-ui" target="_blank">spam-detection-ui</a></li>
+            <li><strong>project description</strong>: <a href="https://drive.google.com/file/d/1RjZwPcrWYnxg-Posi4r5AeGNrNO6SJDq/view?usp=sharing" target="_blank">pdf</a></li>
           </ul>
 
           <p>
-            A task management application with secure authentication and real-time updates.
+            An end-to-end MLOps pipeline for email spam classification, with a FastAPI backend serving the
+            model and a React frontend for submitting emails for analysis.
           </p>
-          
-          <p>
-            <strong>Key Features:</strong>
-          </p>
+
+          <p><strong>Key Features:</strong></p>
           <ul>
-            <li>JWT authentication (Register/Login/Password reset)</li>
-            <li>CRUD operations for tasks with due dates</li>
-            <li>Real-time updates via Strapi Webhooks</li>
-          </ul> -->
+            <li>FastAPI backend with dedicated modules for the model, training, and a scheduler for periodic retraining</li>
+            <li>Feedback loop: predictions and user feedback are logged to a database and fed back into retraining</li>
+            <li>React frontend supporting both single and batch email checks against the API</li>
+            <li>Both services containerized with Docker for local development and deployment</li>
+          </ul>
         </div>
       </div>
     </div>
