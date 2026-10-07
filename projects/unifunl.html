@@ -4,8 +4,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>Unifunl</title>
-    <meta content="Azure to AKS migration using Terraform" name="description">
-    <meta content="terraform, azure, aks, kubernetes, k6, devops, cloud" name="keywords">
+    <meta content="Secure Azure Container Apps to AKS migration with Terraform, Falco and Trivy" name="description">
+    <meta content="terraform, azure, aks, kubernetes, falco, trivy, devsecops, github actions, k6, devops, cloud" name="keywords">
 
     <!-- Favicons -->
     <link href="../assets/img/favicon.png" rel="icon">
@@ -36,18 +36,24 @@
           <br>
           <h2 style="color:#12d640">Unifunl</h2>
           <ul>
-            <li><strong>Tech Stack</strong>: Terraform, Azure App Services, AKS, Kubernetes, k6</li>
+            <li><strong>Tech Stack</strong>: Terraform, Azure Kubernetes Service (AKS), Kubernetes, Falco, Trivy, GitHub Actions, Prometheus, Grafana, Alertmanager, NGINX Ingress, PostgreSQL, Redis, k6</li>
+            <li><strong>Context</strong>: INSAT professional project (team of 3) for Unifunl, a B2B SaaS platform of conversational AI agents for MENA e-commerce</li>
             <li><strong>Github URL</strong>: <a href="https://github.com/Youssef-Guiga/unifunl-pfa" target="_blank">Project Link</a></li>
           </ul>
           <p>
-            Migrated app from Azure App Services to AKS using Terraform, improving scalability and
-            reliability; validated performance with k6.
+            Automated and secured the deployment of a cloud-native microservices platform: migrated it from Azure Container Apps
+            to AKS with Terraform, added runtime threat detection with Falco and image scanning with Trivy, and
+            validated the gains with k6 load tests. Delivered in 45 days.
           </p>
+          <p><strong>Starting point:</strong> latency collapsed under traffic spikes (p95 up to 5.78 s), no runtime security, infrastructure provisioned by hand through the portal and CLI, and no alerting.</p>
           <p><strong>Key Contributions:</strong></p>
           <ul>
-            <li>Wrote Terraform modules to provision the AKS cluster, database, and Redis cache as reproducible infrastructure-as-code, with remote state locking in Azure Blob Storage</li>
-            <li>Migrated the platform's core services (front, account, transactor, collaborator) to AKS, containerizing and deploying them behind Kubernetes with Workload Identity for secretless Azure authentication</li>
-            <li>Benchmarked performance before/after the migration with k6, comparing Azure App Services and AKS under load</li>
+            <li><strong>Architecture</strong> (my part): designed a 3-layer target on AKS &ndash; Terraform for the infrastructure, Kubernetes for the 7 services (3 HPAs, 4 NetworkPolicies, NGINX Ingress with TLS), and Falco for runtime security</li>
+            <li><strong>Infrastructure as code</strong> (my part): Terraform modules for the AKS cluster, PostgreSQL, Redis and the container registry, with remote state and locking in Azure Blob Storage, validated and sensitive variables, and Workload Identity (OIDC) so pods authenticate to Azure AD with no static secret</li>
+            <li><strong>DevSecOps</strong> (my part): deployed Falco as an eBPF DaemonSet in audit-only mode with 3 custom rules &ndash; shell spawned in a container, writes to sensitive paths, and privilege escalation. Defence in depth with NetworkPolicy isolation, TLS in transit, secrets injected through secretKeyRef, and a partial ISO/IEC 27001 alignment</li>
+            <li><strong>CI/CD</strong> (team): 11 GitHub Actions workflows built on one reusable template, with Trivy scanning every image for HIGH/CRITICAL vulnerabilities (the build fails on an unfixed CVE) and scanning the Kubernetes manifests, Terraform and workflows; images tagged by commit SHA, production deployment behind an approval gate, automatic rollback if a rollout fails</li>
+            <li><strong>Observability</strong> (team): Prometheus, Grafana and Alertmanager with 5 alert rules</li>
+            <li><strong>Measured results</strong> (team): k6 benchmarks before and after the migration &ndash; p95 latency down 64% under normal load, up to 94% lower on the data layer, 3.7x more sustained throughput under stress, and the spike collapse eliminated</li>
           </ul>
         </div>
       </div>

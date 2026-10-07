@@ -134,11 +134,11 @@
 
     \resumeSubheading
       {UniFunl --- Azure to AKS Migration}{Mar 2026 -- Present}
-      {Personal Project}{}
+      {INSAT Team Project (3 students) for Unifunl, B2B SaaS}{}
       \resumeItemListStart
-        \resumeItem{Wrote Terraform modules to provision the AKS cluster, database, and Redis cache as reproducible infrastructure-as-code, with remote state locking in Azure Blob Storage.}
-        \resumeItem{Migrated the platform's core services to AKS, containerized behind Kubernetes with Workload Identity for secretless Azure authentication.}
-        \resumeItem{Benchmarked performance before/after the migration with k6, comparing Azure App Services and AKS under load.}
+        \resumeItem{Migrated 7 microservices from Azure Container Apps to AKS with Terraform modules (AKS, PostgreSQL, Redis, ACR), remote state locking in Azure Blob Storage, and Workload Identity for secretless Azure authentication.}
+        \resumeItem{Added a DevSecOps layer: Falco (eBPF, 3 custom rules) for runtime threat detection, and Trivy scans of every image and of the IaC in 11 GitHub Actions workflows, failing the build on unfixed HIGH/CRITICAL CVEs.}
+        \resumeItem{Load-tested with k6 before and after: p95 latency down 64\% under normal load and 3.7x sustained throughput under stress.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -149,7 +149,7 @@
     \small{\item{
      \textbf{Certifications}{: Certified Kubernetes Administrator (CKA)} \\
      \textbf{Cloud \& DevOps}{: AWS, Azure, Kubernetes (AKS/Minikube), Docker, Terraform, CI/CD, GitHub Actions} \\
-     \textbf{Monitoring}{: Prometheus, Grafana, k6} \\
+     \textbf{Monitoring \& Security}{: Prometheus, Grafana, Falco, Trivy, k6} \\
      \textbf{Programming}{: Flask, NestJS, ExpressJS, Angular} \\
      \textbf{Tools}{: Git, Linux} \\
      \textbf{Languages}{: Arabic (native), English (C1), French (B2), Spanish (A2)}
